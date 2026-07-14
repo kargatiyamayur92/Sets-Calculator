@@ -64,12 +64,12 @@ calculateResultbtn.addEventListener("click", async () => {
     let UnionComplementans = null;
 
 
-    if (!U) {
+    if (U.length==0) {
         intersectionComplementans = await solution.complement(unionans, intersectionans)
         Acomplementans = await solution.complement(unionans, A)
         Bcomplementans = await solution.complement(unionans, B)
     }
-    else{
+    else {
         UnionComplementans = await solution.complement(U, unionans)
         intersectionComplementans = await solution.complement(U, intersectionans)
         Acomplementans = await solution.complement(U, A)
@@ -80,7 +80,7 @@ calculateResultbtn.addEventListener("click", async () => {
     let BdiffrenceA = await solution.diffrence(B, A)
 
 
-    if (!U) {
+    if (U.length==0) {
         Union.textContent = unionans
     }
 
