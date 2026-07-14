@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets</title>
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPqqwRyW1ivALDgzULGyGEAQVwBUGlG-4ZbhQ2mi5p-g&s=10" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.2.0/css/all.min.css" integrity="sha512-F/yRpRY8sctKzP7exU5PLGejwg/QtjDX6CIy/41nApe7JqdZgCcCzJTNq9Rcp/XwbeeTGillGevBakruY15pxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <h1>Set</h1>
+        </nav>
+        <div class="gameContainer">
+            <div class="game">
+                <div class="inputs">
+                    <input type="text" placeholder="Enter Set U value">
+                    <input type="text" placeholder="Enter Set A value">
+                    <input type="text" placeholder="Enter Set B value">
+                    <!-- <input type="text" placeholder="Enter Set C value"> -->
+                     <div class="button">Calculate Result</div>
+                </div>
+
+                <div class="operations">
+                    <div class="label">OPeration of Sets</div>
+                    <div class="uinion" href=".Union" >U</div>
+                    <div class="intersection" href=".intersection">U</div>
+                    <div class="Diffrence" href=".Acomplement">A-B</div>
+                    <div class="SymmentricDiffrence" href=".symmentrictdiffrence">A ^ B</div>
+                </div>
+            </div>
+            <div class="result">
+                <div class="Union">
+                    <div class="name" title="Union of Set A and Set B">A Union B</div>
+                    <div class="ans"></div>
+                </div>
+                <div class="intersection" title="Intersection of Set A and Set B">
+                    <div class="name">A intersection B </div>
+                    <div class="ans"></div>
+                </div>
+                <div class="UnionComplement" title="Union Complement U' ">
+                    <div class="name">A Union B Complement</div>
+                    <div class="ans"></div>
+                </div>
+                <div class="intersectionComplement" title="INtersection Complement (A^B)' " >
+                    <div class="name">A intersection B Complement</div>
+                    <div class="ans"></div>
+                </div>
+                <div class="Acomplement" title="A Complement A' " >
+                    <div class="name">A'</div>
+                    <div class="ans"></div>
+                </div>
+                <div class="AcomplementofComplement" title="Complement of Complement that return original value of this set">
+                    <div class="name">(A')'</div>
+                    <div class="ans"></div>
+                </div>
+                <div class="Bcomplement" title="B Complement B' ">
+                    <div class="name">B'</div>
+                    <div class="ans"></div>
+                </div>
+                <div class="BcomplementofComplement" title="Complement of Complement that return original value of this set">
+                    <div class="name">(B')'</div>
+                    <div class="ans"></div>
+                </div>
+                <div class="diffrence1" title="Diffrence betweeen Two sets">
+                    <div class="name">A - B</div>
+                    <div class="ans"></div>
+                </div>
+                <div class="diffrence2" title="Diffrence betweeen two sets">
+                    <div class="name">B - A</div>
+                    <div class="ans"></div>
+                </div>
+                <div class="symmentrictdiffrence" title="Symentric Diffrence set is the Union of two diffrence set A and B">
+                    <div class="name">A ^ B</div>
+                    <div class="ans"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script type="module" src="app.js"></script>
+    
+</body>
+
+</html>

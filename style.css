@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Pixel&family=Lemon&family=Playwrite+ID:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Pixel&family=Lemon&family=Montenegrin+Gothic+One&family=Playwrite+ID:wght@100..400&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom right, rgba(224, 189, 13, 0.884), rgba(128, 0, 51, 0.646));
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+nav {
+    height: 5rem;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.18);
+    position: absolute;
+    top: 0.4rem;
+    left: 5%;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-family: lemon;
+    color: rgba(29, 29, 29, 0.9);
+}
+
+.gameContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.gameContainer .game {
+    height: 80%;
+    width: 48%;
+    border-radius: 0.7rem;
+    background-color: rgba(255, 255, 255, 0.30);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gameContainer .game .inputs {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameContainer .game .inputs input {
+    margin-top: 1rem;
+    height: 3.5rem;
+    width: 80%;
+    font-size: 1.5rem;
+    font-family: lemon;
+    border-radius: 0.3rem;
+    background-color: transparent;
+    border: 2.5px solid rgba(0, 0, 0, 0.9);
+    padding: 0 0.7rem;
+    outline: none;
+}
+
+.gameContainer .game .inputs .button {
+    height: 4rem;
+    width: max-content;
+    font-size: 2rem;
+    margin-top: 0.7rem;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.30);
+    cursor: pointer;
+}
+
+.gameContainer .game .inputs .button:active {
+    scale: 1.2;
+}
+
+.gameContainer .game .inputs input::placeholder {
+    color: rgba(0, 0, 0, 0.696);
+    font-family: lemon;
+}
+
+.gameContainer .game .operations {
+    height: 40%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.gameContainer .game .operations div {
+    height: max-content;
+    width: max-content;
+    padding: 1.3rem 2rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-top: 4rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 2px 2px 20px black;
+    cursor: pointer;
+    position: relative;
+}
+
+.gameContainer .game .operations .label {
+    position: absolute;
+    top: 55%;
+    left: 1%;
+    font-family:Playwrite ID ;
+    padding: 0;
+    border-left: 20px solid red;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.gameContainer .game .operations .intersection {
+    transform: rotate(180deg);
+}
+
+.gameContainer .game .operations div:active {
+    scale: 1.3;
+}
+
+.gameContainer .result {
+    height: 80%;
+    width: 48%;
+    border-radius: 0.7rem;
+    background-color: rgba(255, 255, 255, 0.20);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    overflow-y: auto;
+}
+
+
+.gameContainer .result::-webkit-scrollbar{
+    height: 100%;
+    width: 0;
+}
+
+.gameContainer .result div {
+    height: 4rem;
+    width: 85%;
+    border-radius: 0.7rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    display: flex;
+    cursor: pointer;
+}
+
+.gameContainer .result div .name {
+    height: 100%;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 4rem;
+    font-size: 1.4rem;
+    border-start-start-radius: 0.7rem;
+    background-color: rgba(255, 255, 255, 0.473);
+}
+
+.gameContainer .result div .ans {
+    width: 100%;
+    border-start-start-radius: 0;
+}
+
+.gameContainer .result div .ans {
+    font-size: 2rem;
+    padding-left: 0.4rem;
+    display: flex;
+    align-items: center;
+}
+
+/* ===== Tablet & below ===== */
+@media (max-width: 900px) {
+    nav {
+        height: 4rem;
+        font-size: 1.5rem;
+        width: 92%;
+        left: 4%;
+    }
+
+    .gameContainer {
+        flex-direction: column;
+        height: auto;
+        min-height: 100%;
+        padding: 6rem 1rem 2rem;
+        margin-top: 0;
+        gap: 1.5rem;
+    }
+
+    .gameContainer .game,
+    .gameContainer .result {
+        width: 100%;
+        height: auto;
+
+    }
+
+    .gameContainer .game {
+        padding: 1.5rem 0;
+    }
+
+    .gameContainer .game .inputs input {
+        width: 90%;
+        font-size: 1.2rem;
+        height: 3rem;
+    }
+
+    .gameContainer .game .inputs .button {
+        font-size: 1.5rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .gameContainer .game .operations {
+        flex-wrap: wrap;
+        gap: 1rem;
+        height: auto;
+        padding: 3rem 0.5rem 1rem;
+    }
+
+    .gameContainer .game .operations div {
+        font-size: 1.3rem;
+        padding: 0.9rem 1.3rem;
+        margin-top: 0;
+    }
+
+    .gameContainer .game .operations .label {
+        /* top: 0.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.9rem;
+        white-space: nowrap;
+        padding: 0.5rem 0.8rem; */
+        margin-top: -3.2rem;
+        filter: blur(0.5px);
+    }
+
+    .gameContainer .game .operations .intersection {
+        transform: none;
+    }
+
+    .gameContainer .result div {
+        height: auto;
+        min-height: 3.5rem;
+        width: 95%;
+    }
+
+    .gameContainer .result div .name {
+        font-size: 1.1rem;
+        min-width: 3rem;
+        padding: 0 0.5rem;
+        text-align: center;
+    }
+
+    .gameContainer .result div .ans {
+        font-size: 1.4rem;
+    }
+}
+
+/* ===== Small phones ===== */
+@media (max-width: 480px) {
+    nav {
+        font-size: 1.2rem;
+        height: 3.5rem;
+    }
+
+    .gameContainer {
+        padding: 5rem 0.5rem 1.5rem;
+        gap: 1rem;
+    }
+
+    .gameContainer .game .inputs input {
+        font-size: 1rem;
+        height: 2.7rem;
+    }
+
+    .gameContainer .game .inputs .button {
+        font-size: 1.2rem;
+        height: 3rem;
+        margin-bottom: 1rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .gameContainer .game .operations div {
+        font-size: 1rem;
+        padding: 0.7rem 1rem;
+    }
+
+    .gameContainer .result div .name {
+        font-size: 0.9rem;
+    }
+
+    .gameContainer .result div .ans {
+        font-size: 1.1rem;
+    }
+}
